@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Listado de Usuarios</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="usersApp.js"></script>
+	<link rel="stylesheet" type="text/css" href="heroclix.css">
+</head>
+
+<body>
+	<h1 style="text-align:center">Listado de Usuarios</h1>
+	
+	<div id="usersPane" ng-app="usersApp" ng-controller="usersController" style="text-align:center;">
+			
+			<table class="PublicationTable">
+			
+				<tr> 
+					<th ng-click="changeCriteria('username')" ng-class="{CriteriaSelected: (orderingCriteria == 'username')}"> Usuario </th> 
+					<th ng-click="changeCriteria('email')" ng-class="{CriteriaSelected: (orderingCriteria == 'email')}"> Email </th> 
+				</tr>
+				
+				<tr ng-repeat="pub in publications | filter: {'username': filterCriteria} | orderBy: orderingCriteria">
+					<td> {{pub.username}} </td>
+					<td> {{pub.email}} </td>
+				</tr>
+				
+			</table>
+		
+		<span ng-hide="dataLoaded">
+			Publication list cannot be loaded
+		</span>
+		
+	</div>
+
+</body> 
+ 
+</html>

@@ -1,0 +1,8 @@
+es\rubio\clix\serviceLayer\PersonController.class
+es\rubio\clix\ServletInitializer.class
+es\rubio\clix\store\PersonService.class
+es\rubio\clix\domainModel\Person.class
+es\rubio\clix\domainModel\Figura.class
+es\rubio\clix\store\DataStore.class
+es\rubio\clix\ClixReleaseApplication.class
+es\rubio\clix\serviceLayer\FigureController.class

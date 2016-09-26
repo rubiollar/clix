@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Alta Usuario</title>
+	<script src="commontypes.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="AddUserApp.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="test.css"> -->
+</head>
+
+<body style="width: 577px; ">
+
+	<h2 style="text-align:center">Alta de Nuevo Usuario</h2>
+	
+		<div class="form" ng-app="AddUserApp" ng-controller="AddUserCtrl">
+		
+			<form style="width: 565px; ">
+				
+				* Email: <input id="email" ng-model="email" type="text"> <br><br>
+				
+				* Usuario: <input id="username" ng-model="username" type="text"> <br><br>
+				
+				* Password: <input id="password" ng-model="password" type="password">
+				
+				<input id="addBtn" class="btn" type="submit" ng-click="addPerson()" value="Enviar"> <br><br>
+				
+			
+			</form>
+			
+		{{msg}}
+		
+		<br>
+		
+	</div>
+	
+	<p><a href="javascript:history.go(-1)"><input name="Volver al LOGIN" type="button" value="Continuar" /></a></p>
+
+</body>
+
+</html>

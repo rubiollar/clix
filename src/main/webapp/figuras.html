@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Listado de Figuras</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="figurasApp.js"></script>
+	<link rel="stylesheet" type="text/css" href="heroclix.css">
+</head>
+
+<body>
+	<h1 style="text-align:center">Listado de Figuras</h1>
+	
+	<div id="figurasPane" ng-app="figurasApp" ng-controller="figurasController" style="text-align:center;">
+		
+
+		
+			<table class="PublicationTable">
+				<tr> 
+					<th ng-click="changeCriteria('expansion')" ng-class="{CriteriaSelected: (orderingCriteria == 'expansion')}"> Expansion </th> 
+					<th ng-click="changeCriteria('nombre')" ng-class="{CriteriaSelected: (orderingCriteria == 'nombre')}"> Nombre </th> 
+					<th ng-click="changeCriteria('estado')" ng-class="{CriteriaSelected: (orderingCriteria == 'estado')}"> Estado </th>
+				</tr>
+				<tr ng-repeat="pub in publications | filter: {'expansion': filterCriteria} | orderBy: orderingCriteria">
+					<td> {{pub.expansion}} </td>
+					<td> {{pub.nombre}} </td>
+					<td> {{pub.estado}} </td>
+				</tr>
+			</table>
+			
+		
+		<span ng-hide="dataLoaded">
+			Publication list cannot be loaded
+		</span>
+		
+	</div>
+
+</body> 
+ 
+</html>

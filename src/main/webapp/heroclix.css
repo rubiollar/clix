@@ -1,0 +1,23 @@
+.PublicationTable {
+	padding:0px;
+	width: auto;
+	margin: 0 auto;
+	box-shadow: 10px 10px 5px #888888;
+}.PublicationTable table{
+	width:100%;
+	height:100%;
+	padding:0px;
+}.PublicationTable th { 
+	background-color:#000000; 
+	color: #ffffff;
+	cursor: pointer;
+}.PublicationTable tr:nth-child(odd)     { background-color:#aad4ff; 
+}.PublicationTable tr:nth-child(even)    { background-color:#ffffff; 
+}.PublicationTable td {
+	vertical-align:middle;
+	text-align:left;
+	padding:7px;
+}
+.CriteriaSelected {
+	text-decoration: underline;	
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html style="width: 590px; ">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Alta Figura</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="AddFiguraApp.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="test.css"> -->
+</head>
+
+<body>
+
+	<h2 style="text-align:center; width: 577px">Alta de Nueva Figura</h2>
+	
+		<div class="form" ng-app="AddFiguraApp" ng-controller="AddFiguraCtrl">
+		
+			<form style="width: 557px; "> 
+			
+				------- EXPANSION ------------- NOMBRE -------------- ESTADO -------
+				<br><br>
+				     
+				    <select id="expansion" ng-model="expansion">
+						<option disabled>Elige una opcion</option>
+						<option value="SVB">Superman vs Batman</option>
+						<option value="XAA">X-Men Age of Apocalypse</option>
+					</select>
+				     
+				    <input id="nombre" ng-model="nombre" type="text">
+				     
+				    <select id="estado" ng-model="estado">
+       					<option disabled>Elige una opcion</option>
+						<option value="No la tengo">No la tengo</option>
+						<option value="La tengo">La tengo</option>
+						<option value="Repe">Repe</option>
+						<option value="En busca y captura">En busca y captura</option>
+					</select>
+				     
+				     <input id="addBtn" class="btn" type="submit" ng-click="addFigura()" value="Enviar"><br><br />
+			
+			</form>
+			
+		{{msg}}
+		
+	</div>
+
+</body>
+
+</html>
